@@ -1,0 +1,104 @@
+<ul class="breadcrumb no-border no-radius b-b b-light pull-in">
+  <li>
+    <a href="index.html">
+      <i class="fa fa-home"></i> Home</a>
+  </li>
+  <li class="active">Department</li>
+</ul>
+<p-growl [(value)]="msgs"></p-growl>
+<header class="header b-b b-light hidden-print">
+
+  <h3 class="m-b-none">Role</h3>
+</header>
+
+
+
+<div class="row">
+  <section class="panel panel-default">
+
+    <div class="panel-body">
+      <form class="form-horizontal" method="get">
+
+
+        <div class="form-group">
+          <label class="col-sm-2 control-label">First Name</label>
+          <div class="col-sm-10">
+            <input type="text" name="dp" class="form-control" [(ngModel)]="roleDetails.roleName" placeholder="Role Name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Last Name</label>
+          <div class="col-sm-10">
+            <input type="text" name="dp" class="form-control" [(ngModel)]="roleDetails.roleName" placeholder="Role Name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Email Address</label>
+          <div class="col-sm-10">
+            <input type="text" name="dp" class="form-control" [(ngModel)]="roleDetails.roleName" placeholder="Role Name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Birth Date</label>
+          <div class="col-sm-10">
+              <input class="input-sm input-s datepicker-input form-control" size="16" type="text" value="12-02-2013" data-date-format="dd-mm-yyyy" >
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Department</label>
+          <div class="col-sm-10">
+            <select name="account" class="form-control">
+              <option>option 1</option>
+              <option>option 2</option>
+              <option>option 3</option>
+              <option>option 4</option>
+            </select>
+
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Role</label>
+          <div class="col-sm-10">
+            <select name="account" class="form-control">
+              <option>option 1</option>
+              <option>option 2</option>
+              <option>option 3</option>
+              <option>option 4</option>
+            </select>
+
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">File input</label>
+          <div class="col-sm-10">
+            <input type="file" class="filestyle" data-icon="false" data-classbutton="btn btn-default" data-classinput="form-control inline input-s"
+              id="filestyle-0" style="position: fixed; left: -500px;">
+            <div class="bootstrap-filestyle" style="display: inline;">
+              <input type="text" class="form-control inline input-s" disabled="">
+              <label for="filestyle-0" class="btn btn-default">
+                <span>Choose file</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Active</label>
+          <div class="col-sm-10">
+            <label class="switch">
+              <input type="checkbox" name="act" [(ngModel)]="roleDetails.isActive">
+              <span></span>
+            </label>
+          </div>
+        </div>
+        <div class="line line-dashed line-lg pull-in"></div>
+        <div class="form-group">
+          <div class="col-sm-4 col-sm-offset-2">
+            <button type="submit" class="btn btn-default">Cancel</button>
+            <button type="submit" class="btn btn-primary" (click)="doRoleAdd()">Save changes</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </section>
+</div>

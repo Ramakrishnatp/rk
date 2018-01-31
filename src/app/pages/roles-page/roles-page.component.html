@@ -1,0 +1,45 @@
+<ul class="breadcrumb no-border no-radius b-b b-light pull-in">
+  <li>
+    <a href="index.html">
+      <i class="fa fa-home"></i> Home</a>
+  </li>
+  <li class="active">Role</li>
+</ul>
+
+<header class="header b-b b-light hidden-print">
+  <button [routerLink]="['/AddRole']" class="btn btn-sm btn-info pull-right">Add Role</button>
+  <h3 class="m-b-none">Role</h3>
+</header>
+
+
+
+<div class="row">
+  <div class="col-md-12">
+    <section class="panel panel-default">
+      <div class="panel-body">
+        <table class="table table-striped m-b-none" data-ride="datatables">
+          <thead>
+            <tr>
+              <th width="20%">S.No</th>
+              <th width="25%">Role Name</th>
+              <th width="25%">Status</th>
+              <th width="15%">Action</th>
+
+            </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let role of roleDetails;let i=index">
+                  <td width="20%">{{i+1}}</td>
+                  <td width="25%">{{role.role_name}}</td>
+                  <td width="25%">{{role.is_active}}</td>
+                  <td width="15%">Action</td>
+    
+                </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+
+</div>

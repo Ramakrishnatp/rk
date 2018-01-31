@@ -1,0 +1,25 @@
+<section class="vbox" *ngIf="isLoggedIn==true">
+  <header class="bg-dark dk header navbar navbar-fixed-top-xs">
+    <app-header-component></app-header-component>
+  </header>
+  <section>
+    <section class="hbox stretch">
+      <aside class="bg-dark lter b-r aside-md hidden-print" id="nav">
+        <section class="vbox">
+          <app-sidemenu-component></app-sidemenu-component>
+        </section>
+      </aside>
+      <section id="content">
+        <section class="vbox">
+          <section class="scrollable padder">
+            <router-outlet></router-outlet>
+          </section>
+        </section>
+
+      </section>
+    </section>
+  </section>
+</section>
+<section class="bg-dark" *ngIf="isLoggedIn==false">
+  <app-login-page></app-login-page>
+</section>

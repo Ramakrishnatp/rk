@@ -1,0 +1,49 @@
+<ul class="breadcrumb no-border no-radius b-b b-light pull-in">
+  <li>
+    <a href="index.html">
+      <i class="fa fa-home"></i> Home</a>
+  </li>
+  <li class="active">Department</li>
+</ul>
+<p-growl [(value)]="msgs"></p-growl>
+<header class="header b-b b-light hidden-print">
+
+  <h3 class="m-b-none">Role</h3>
+</header>
+
+
+
+<div class="row">
+  <section class="panel panel-default">
+
+    <div class="panel-body">
+      <form class="form-horizontal" method="get">
+
+
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Role Name</label>
+          <div class="col-sm-10">
+            <input type="text" name="dp" class="form-control" [(ngModel)]="roleDetails.roleName" placeholder="Role Name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Active</label>
+          <div class="col-sm-10">
+            <label class="switch">
+              <input type="checkbox" name="act" [(ngModel)]="roleDetails.isActive">
+              <span></span>
+            </label>
+          </div>
+        </div>
+        <div class="line line-dashed line-lg pull-in"></div>
+        <div class="form-group">
+          <div class="col-sm-4 col-sm-offset-2">
+            <button type="submit" class="btn btn-default">Cancel</button>
+            <button type="submit" class="btn btn-primary" (click)="doRoleAdd()">Save changes</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </section>
+</div>

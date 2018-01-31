@@ -1,0 +1,44 @@
+<ul class="breadcrumb no-border no-radius b-b b-light pull-in">
+  <li>
+    <a href="index.html">
+      <i class="fa fa-home"></i> Home</a>
+  </li>
+  <li class="active">Department</li>
+</ul>
+
+<header class="header b-b b-light hidden-print">
+  <button [routerLink]="['/AddDepartment']" class="btn btn-sm btn-info pull-right">Add Department</button>
+  <h3 class="m-b-none">Department</h3>
+</header>
+
+
+
+<div class="row">
+  <div class="col-md-12">
+    <section class="panel panel-default">
+      <div class="panel-body">
+        <table class="table table-striped m-b-none" data-ride="datatables">
+          <thead>
+            <tr>
+              <th width="20%">S.No</th>
+              <th width="25%">Department Name</th>
+              <th width="25%">Status</th>
+              <th width="15%">Action</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let dept of departmentDetails; let i = index ">
+              <td width="20%">{{i+1}}</td>
+              <td width="25%">{{dept.department_name}}</td>
+              <td width="25%"><a *ngIf="dept.is_active==1" href="#" class="btn btn-xs btn-success m-t-xs">Active</a><a href="#" *ngIf="dept.is_active==0" class="btn btn-xs btn-danger m-t-xs">Inactive</a></td>
+              <td width="15%"><a href="#" class="btn btn-sm btn-icon btn-success"><i class="fa fa-pencil-square-o"></i></a> <a href="#" class="btn btn-sm btn-icon btn-danger"><i class="fa fa-trash"></i></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+
+</div>
